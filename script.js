@@ -15,7 +15,7 @@ let food = {
 
 function createBG() {
   context.fillStyle = "lightgreen";
-  context.fillRect(0, 0, 16 * box, 16 * box);
+  context.fillRect(0, 0, 16 * box, 16 * box); //Draws square using x and y and the set width and height
 }
 
 function createSnake() {
@@ -30,6 +30,7 @@ function drawFood() {
   context.fillRect(food.x, food.y, box, box);
 }
 
+//Detects key clicked on the keyboard and calls the UPDATE function
 document.addEventListener("keydown", update);
 
 function update(event) {
@@ -66,7 +67,7 @@ function startGame() {
   if(direction == "down") snakeY += box;
 
   if(snakeX != food.x || snakeY != food.y) {
-    snake.pop();
+    snake.pop(); //Removes the last element from the list
   }
   else {
     food.x= Math.floor( Math.random() * 15 + 1) * box; 
@@ -78,7 +79,8 @@ function startGame() {
     y: snakeY
   };
 
-  snake.unshift(newSnakeHead);
+  snake.unshift(newSnakeHead); //Adds new item at the beginning of the snake
 }
 
+//Add time interval for the start game function
 let game = setInterval(startGame, 100);
