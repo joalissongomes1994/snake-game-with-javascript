@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: limegreen;
+}
+h1 {
+  padding-bottom: 1rem;
+}
+#canvas {
+  border: 1px solid green;
+}
